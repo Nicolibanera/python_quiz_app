@@ -1,0 +1,57 @@
+{
+    "Fundamentals": {
+        "Basics": [
+            {
+                "question": "What is the correct file extension for Python files?",
+                "options": [".pt", ".pyth", ".py", ".pyt"],
+                "correct_answer": ".py"
+            },
+            {
+                "question": "Which keyword is used to define a function in Python?",
+                "options": ["func", "define", "def", "function"],
+                "correct_answer": "def"
+            },
+            {
+                "question": "What is the output of print(type(10))?",
+                "options": ["<class 'float'>", "<class 'int'>", "<class 'str'>", "<class 'number'>"],
+                "correct_answer": "<class 'int'>"
+            },
+            {
+                "question": "Which symbol is used for comments in Python?",
+                "options": ["//", "#", "/* */", "<!-- -->"],
+                "correct_answer": "#"
+            },
+            {
+                "question": "What does len() do?",
+                "options": ["Returns size of RAM", "Counts CPU speed", "Returns the length of a sequence", "Deletes characters"],
+                "correct_answer": "Returns the length of a sequence"
+            },
+            {
+                "question": "What is the output of 3 * 'Hi'?",
+                "options": ["HiHi", "HiHiHi", "Error", "3Hi"],
+                "correct_answer": "HiHiHi"
+            },
+            {
+                "question": "Which data type is ordered, changeable, and allows duplicates?",
+                "options": ["Tuple", "Dictionary", "Set", "List"],
+                "correct_answer": "List"
+            },
+            {
+                "question": "What is the correct way to create a variable?",
+                "options": ["int x = 5", "var x = 5", "x = 5", "dim x = 5"],
+                "correct_answer": "x = 5"
+            },
+            {
+                "question": "What is indentation used for in Python?",
+                "options": ["Decorating code", "Defining code blocks", "Ending statements", "Writing comments"],
+                "correct_answer": "Defining code blocks"
+            },
+            {
+                "question": "Which keyword is used to stop a loop?",
+                "options": ["stop", "quit", "break", "exit"],
+                "correct_answer": "break"
+            }
+        ]
+    }
+
+}
