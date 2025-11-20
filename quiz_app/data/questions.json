@@ -52,6 +52,60 @@
                 "correct_answer": "break"
             }
         ]
+    },
+     "Intermediate Concepts": {
+        "Core": [
+            {
+                "question": "What is a Python lambda?",
+                "options": ["A constant", "A loop", "A small anonymous function", "A library"],
+                "correct_answer": "A small anonymous function"
+            },
+            {
+                "question": "What is list comprehension used for?",
+                "options": ["Creating variables", "Creating lists in one line", "Debugging code", "Importing modules"],
+                "correct_answer": "Creating lists in one line"
+            },
+            {
+                "question": "What is the output of [x for x in range(3)]?",
+                "options": ["[1,2,3]", "[0,1,2]", "[3,2,1]", "[0,1,2,3]"],
+                "correct_answer": "[0,1,2]"
+            },
+            {
+                "question": "*What does *args represent in a function?",
+                "options": ["A string", "A dictionary", "Variable positional arguments", "A class"],
+                "correct_answer": "Variable positional arguments"
+            },
+            {
+                "question": "What does **kwargs represent?",
+                "options": ["Keyword arguments", "A file handler", "A loop", "A module"],
+                "correct_answer": "Keyword arguments"
+            },
+            {
+                "question": "What is a Python module?",
+                "options": ["A package manager", "A folder", "A file containing Python code", "A database"],
+                "correct_answer": "A file containing Python code"
+            },
+            {
+                "question": "What is the output of 'a' in 'apple'?",
+                "options": ["False", "True", "a", "Error"],
+                "correct_answer": "True"
+            },
+            {
+                "question": "What is the purpose of try...except?",
+                "options": ["Looping", "Error handling", "Math operations", "Sorting data"],
+                "correct_answer": "Error handling"
+            },
+            {
+                "question": "What is the difference between list and tuple?",
+                "options": ["Lists are faster", "Tuples are mutable", "Lists are mutable and tuples are not", "They are the same"],
+                "correct_answer": "Lists are mutable and tuples are not"
+            },
+            {
+                "question": "What is OOP?",
+                "options": ["Object-Oriented Programming", "Optimal Operating Procedure", "Open Object Platform", "Object Order Process"],
+                "correct_answer": "Object-Oriented Programming"
+            }
+        ]
     }
 
 }
