@@ -106,6 +106,114 @@
                 "correct_answer": "Object-Oriented Programming"
             }
         ]
+    },
+     "Database & Standard Libraries": {
+        "Core": [
+            {
+                "question": "Which library is used to work with date and time?",
+                "options": ["time", "calendar", "datetime", "date"],
+                "correct_answer": "datetime"
+            },
+            {
+                "question": "Which library works with SQLite?",
+                "options": ["sql", "mysqldb", "sqlite3", "pysql"],
+                "correct_answer": "sqlite3"
+            },
+            {
+                "question": "What does SELECT do in SQL?",
+                "options": ["Deletes data", "Updates data", "Retrieves data", "Creates a table"],
+                "correct_answer": "Retrieves data"
+            },
+            {
+                "question": "What does json.load() do?",
+                "options": ["Reads JSON from a file", "Writes JSON", "Deletes JSON", "Parses XML"],
+                "correct_answer": "Reads JSON from a file"
+            },
+            {
+                "question": "What does os.path.exists() check?",
+                "options": ["If text exists", "If a file exists", "If Python exists", "If folder name is long"],
+                "correct_answer": "If a file exists"
+            },
+            {
+                "question": "Which library handles file system operations?",
+                "options": ["os", "sys", "math", "random"],
+                "correct_answer": "os"
+            },
+            {
+                "question": "What does .commit() do in a database?",
+                "options": ["Runs SQL", "Saves changes", "Closes database", "Creates table"],
+                "correct_answer": "Saves changes"
+            },
+            {
+                "question": "What does random.shuffle() do?",
+                "options": ["Sorts list", "Randomly arranges elements", "Deletes list", "Creates list"],
+                "correct_answer": "Randomly arranges elements"
+            },
+            {
+                "question": "Which SQL command inserts data?",
+                "options": ["PUT", "ADD", "INSERT", "SAVE"],
+                "correct_answer": "INSERT"
+            },
+            {
+                "question": "What does importing math allow?",
+                "options": ["GUI programming", "Database management", "Math functions like sqrt()", "Networking"],
+                "correct_answer": "Math functions like sqrt()"
+            }
+        ]
+    },
+     "File Formats": {
+        "Core": [
+            {
+                "question": "What does CSV stand for?",
+                "options": ["Column Standard Values", "Comma-Separated Values", "Common Storage Version", "Computer Separated Volume"],
+                "correct_answer": "Comma-Separated Values"
+            },
+            {
+                "question": "Which library reads CSV files?",
+                "options": ["json", "csv", "excel", "file"],
+                "correct_answer": "csv"
+            },
+            {
+                "question": "Which mode opens a file for reading?",
+                "options": ["w", "r", "rw", "open"],
+                "correct_answer": "r"
+            },
+            {
+                "question": "What is JSON used for?",
+                "options": ["Image editing", "Data exchange", "Running programs", "File compression"],
+                "correct_answer": "Data exchange"
+            },
+            {
+                "question": "Which function converts Python objects to JSON?",
+                "options": ["json.save()", "json.dumps()", "json.write()", "json.encode()"],
+                "correct_answer": "json.dumps()"
+            },
+            {
+                "question": "JSON uses what format?",
+                "options": ["Tables", "Key-value pairs", "Binary", "Audio format"],
+                "correct_answer": "Key-value pairs"
+            },
+            {
+                "question": "Which format is best for structured tables?",
+                "options": ["PNG", "CSV", "MP4", "TXT"],
+                "correct_answer": "CSV"
+            },
+            {
+                "question": "What does 'w' mode do?",
+                "options": ["Writes and overwrites", "Reads only", "Appends", "Deletes file"],
+                "correct_answer": "Writes and overwrites"
+            },
+            {
+                "question": "Which library reads Excel?",
+                "options": ["openpyxl", "json", "csv", "sys"],
+                "correct_answer": "openpyxl"
+            },
+            {
+                "question": "What extension does JSON use?",
+                "options": [".jsn", ".json", ".jfile", ".txtjson"],
+                "correct_answer": ".json"
+            }
+        ]
     }
 
 }
