@@ -214,6 +214,114 @@
                 "correct_answer": ".json"
             }
         ]
+    },
+    "API": {
+        "Core": [
+            {
+                "question": "API stands for?",
+                "options": ["Advanced Python Interface", "Application Programming Interface", "Applied Program Input", "Automated Protocol Internet"],
+                "correct_answer": "Application Programming Interface"
+            },
+            {
+                "question": "Which library is used to make API requests?",
+                "options": ["requests", "json", "api", "urllib2"],
+                "correct_answer": "requests"
+            },
+            {
+                "question": "What is an HTTP GET request?",
+                "options": ["Sends data", "Deletes data", "Retrieves data", "Encrypts data"],
+                "correct_answer": "Retrieves data"
+            },
+            {
+                "question": "What is an HTTP POST request?",
+                "options": ["Retrieves data", "Sends data", "Closes connection", "Clears cache"],
+                "correct_answer": "Sends data"
+            },
+            {
+                "question": "Most APIs return data in which format?",
+                "options": ["CSV", "XML", "JSON", "Binary"],
+                "correct_answer": "JSON"
+            },
+            {
+                "question": "What does response.status_code show?",
+                "options": ["HTML version", "Server name", "HTTP response code", "API key"],
+                "correct_answer": "HTTP response code"
+            },
+            {
+                "question": "What does response.json() do?",
+                "options": ["Creates JSON", "Converts API response to dict", "Downloads file", "Writes to file"],
+                "correct_answer": "Converts API response to dict"
+            },
+            {
+                "question": "What is an API key used for?",
+                "options": ["Decoration", "Authentication", "Sorting", "Math operations"],
+                "correct_answer": "Authentication"
+            },
+            {
+                "question": "What does a 404 error mean?",
+                "options": ["Forbidden", "Not found", "Timeout", "Success"],
+                "correct_answer": "Not found"
+            },
+            {
+                "question": "What is a REST API?",
+                "options": ["API for images", "File converter", "API using HTTP methods", "Audio API"],
+                "correct_answer": "API using HTTP methods"
+            }
+        ]
+    },
+     "Advanced Python": {
+        "Core": [
+            {
+                "question": "What is a decorator?",
+                "options": ["A loop", "A class", "A function modifying another function", "A debugger"],
+                "correct_answer": "A function modifying another function"
+            },
+            {
+                "question": "What is multithreading?",
+                "options": ["Running tasks one by one", "Running multiple threads", "Python packaging", "Opening files"],
+                "correct_answer": "Running multiple threads"
+            },
+            {
+                "question": "Which module handles threading?",
+                "options": ["time", "os", "threading", "async"],
+                "correct_answer": "threading"
+            },
+            {
+                "question": "What does yield create?",
+                "options": ["List", "Tuple", "Generator", "Module"],
+                "correct_answer": "Generator"
+            },
+            {
+                "question": "What is a generator?",
+                "options": ["A fast loop", "A function with yield", "Database handler", "File writer"],
+                "correct_answer": "A function with yield"
+            },
+            {
+                "question": "What is polymorphism?",
+                "options": ["Memory saving", "Same function name behaving differently", "Looping", "Type conversion"],
+                "correct_answer": "Same function name behaving differently"
+            },
+            {
+                "question": "What is inheritance?",
+                "options": ["Copying files", "Creating new classes from others", "Using loops", "Importing modules"],
+                "correct_answer": "Creating new classes from others"
+            },
+            {
+                "question": "Which library handles regex?",
+                "options": ["re", "json", "csv", "math"],
+                "correct_answer": "re"
+            },
+            {
+                "question": "What is context management for?",
+                "options": ["Handling resources with 'with'", "Sorting data", "Networking", "Decorating"],
+                "correct_answer": "Handling resources with 'with'"
+            },
+            {
+                "question": "Why use virtual environments?",
+                "options": ["Increase speed", "Isolate dependencies", "Encrypt code", "Make GUI apps"],
+                "correct_answer": "Isolate dependencies"
+            }
+        ]
     }
 
 }
