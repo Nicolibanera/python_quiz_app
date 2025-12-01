@@ -2,6 +2,8 @@ import tkinter as tk
 from models import QuizModel
 from views.page1_view import Page1View
 from views.page2_view import Page2View
+from views.result import ResultView
+
 
 class QuizController:
     def __init__(self, root):
@@ -12,6 +14,8 @@ class QuizController:
         # Initializing the viewpages
         self.page1 = Page1View(root, self)
         self.page2 = Page2View(root, self)
+        self.result_page = ResultView(root, self)
+
         
     def run(self):
         self.show_page1()
