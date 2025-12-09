@@ -1,0 +1,253 @@
+{
+  "Core": [
+    {
+      "question": "What is the correct way to assign a value to a variable in Python?",
+      "options": ["x == 5", "x = 5", "int x = 5", "var x = 5"],
+      "answer": 1,
+      "explanation": "The '=' operator assigns a value to a variable."
+    },
+    {
+      "question": "Which of the following is a mutable data type?",
+      "options": ["tuple", "str", "int", "list"],
+      "answer": 3,
+      "explanation": "Lists are mutable and can be changed after creation."
+    },
+    {
+      "question": "Which keyword is used to create a function?",
+      "options": ["func", "def", "function", "lambda"],
+      "answer": 1,
+      "explanation": "Functions are defined using the 'def' keyword."
+    },
+    {
+      "question": "What is the output of: print(type(5))?",
+      "options": ["<class 'float'>", "<class 'number'>", "<class 'int'>", "<class 'str'>"],
+      "answer": 2,
+      "explanation": "The literal 5 is an integer."
+    },
+    {
+      "question": "What symbol is used to start a comment in Python?",
+      "options": ["//", "#", "/*", "<!--"],
+      "answer": 1,
+      "explanation": "Python uses '#' for comments."
+    },
+    {
+      "question": "Which loop executes a block of code a known number of times?",
+      "options": ["while", "for", "repeat", "loop"],
+      "answer": 1,
+      "explanation": "The for loop iterates over sequences or ranges."
+    },
+    {
+      "question": "What does len() return when used on a list?",
+      "options": ["Number of bytes", "Number of elements", "Memory size", "Index of last item"],
+      "answer": 1,
+      "explanation": "len() returns the number of items in a container."
+    },
+    {
+      "question": "What is the output of: 'Hello'[1]?",
+      "options": ["H", "e", "l", "o"],
+      "answer": 1,
+      "explanation": "Index 1 returns the second character."
+    },
+    {
+      "question": "Which of these is a boolean value?",
+      "options": ["'True'", "1", "True", "yes"],
+      "answer": 2,
+      "explanation": "True and False are boolean values."
+    },
+    {
+      "question": "Which keyword is used to exit a loop?",
+      "options": ["stop", "quit", "exit", "break"],
+      "answer": 3,
+      "explanation": "break stops loop execution."
+    }
+  ],
+
+  "Advanced": [
+    {
+      "question": "Which method is called automatically when an object is created?",
+      "options": ["__make__", "__init__", "__start__", "__create__"],
+      "answer": 1,
+      "explanation": "__init__ is the constructor method."
+    },
+    {
+      "question": "What does a decorator do?",
+      "options": ["Repeats a function", "Modifies a function's behavior", "Creates loops", "Creates classes"],
+      "answer": 1,
+      "explanation": "Decorators wrap functions to add functionality."
+    },
+    {
+      "question": "What keyword turns a function into a generator?",
+      "options": ["generate", "yield", "return", "stop"],
+      "answer": 1,
+      "explanation": "'yield' pauses execution and returns a generator."
+    },
+    {
+      "question": "Which of these creates a list comprehension?",
+      "options": ["for x in y {}", "[x for x in y]", "(x -> y)", "list(x,y)"],
+      "answer": 1,
+      "explanation": "List comprehensions use brackets with a for clause."
+    },
+    {
+      "question": "Which paradigm does Python support?",
+      "options": ["Procedural only", "Object-oriented only", "Both procedural and object-oriented", "Functional only"],
+      "answer": 2,
+      "explanation": "Python supports multiple paradigms."
+    },
+    {
+      "question": "What is the purpose of the super() function?",
+      "options": ["Delete a class", "Call a parent method", "Create attributes", "Stop inheritance"],
+      "answer": 1,
+      "explanation": "super() is used to access parent class methods."
+    },
+    {
+      "question": "What does __str__ return?",
+      "options": ["HTML representation", "A readable string representation", "Object location in memory", "The class name"],
+      "answer": 1,
+      "explanation": "__str__ defines how an object is printed."
+    },
+    {
+      "question": "Which keyword creates an anonymous function?",
+      "options": ["def", "lambda", "anon", "func"],
+      "answer": 1,
+      "explanation": "lambda creates small anonymous functions."
+    },
+    {
+      "question": "What error type is raised when a key is missing in a dictionary?",
+      "options": ["IndexError", "KeyError", "TypeError", "LookupError"],
+      "answer": 1,
+      "explanation": "Missing keys raise KeyError."
+    },
+    {
+      "question": "Which of the following is a generator expression?",
+      "options": ["[x*x for x in y]", "(x*x for x in y)", "{x*x for x in y}", "x*x for x in y"],
+      "answer": 1,
+      "explanation": "Generator expressions use parentheses."
+    }
+  ],
+
+  "Modules": [
+    {
+      "question": "Which module is used for working with JSON?",
+      "options": ["pickle", "json", "sys", "typing"],
+      "answer": 1,
+      "explanation": "The json module handles JSON operations."
+    },
+    {
+      "question": "Which module helps interact with the operating system?",
+      "options": ["io", "os", "math", "time"],
+      "answer": 1,
+      "explanation": "The os module provides OS-level functions."
+    },
+    {
+      "question": "Which module gives access to command-line arguments?",
+      "options": ["sys", "re", "json", "arg"],
+      "answer": 0,
+      "explanation": "sys.argv holds command-line arguments."
+    },
+    {
+      "question": "Which function pauses program execution?",
+      "options": ["time.sleep()", "os.wait()", "pause()", "sys.stop()"],
+      "answer": 0,
+      "explanation": "sleep() pauses for a specified duration."
+    },
+    {
+      "question": "Which module handles regular expressions?",
+      "options": ["regex", "re", "match", "pyregex"],
+      "answer": 1,
+      "explanation": "re is Python's regex module."
+    },
+    {
+      "question": "Which module works with file paths in an object-oriented way?",
+      "options": ["os.path", "json", "pathlib", "shutil"],
+      "answer": 2,
+      "explanation": "pathlib provides OO path handling."
+    },
+    {
+      "question": "Which module generates random numbers?",
+      "options": ["random", "math", "numbers", "time"],
+      "answer": 0,
+      "explanation": "The random module handles randomness."
+    },
+    {
+      "question": "Which module provides date and time functions?",
+      "options": ["calendar", "datetime", "time", "clock"],
+      "answer": 1,
+      "explanation": "datetime works with dates and times."
+    },
+    {
+      "question": "What module should you import to handle CSV files?",
+      "options": ["file", "csv", "data", "table"],
+      "answer": 1,
+      "explanation": "csv is the dedicated module for CSV handling."
+    },
+    {
+      "question": "Which module can copy files and directories?",
+      "options": ["shutil", "copy", "os", "pathlib"],
+      "answer": 0,
+      "explanation": "shutil provides high-level file operations."
+    }
+  ],
+
+  "Techniques": [
+    {
+      "question": "Which structure is used for error handling?",
+      "options": ["try/except", "if/else", "switch", "catch/throw"],
+      "answer": 0,
+      "explanation": "try/except handles exceptions."
+    },
+    {
+      "question": "Which technique ensures a file closes automatically?",
+      "options": ["closing()", "auto.close", "with open(...) as f", "safe_open()"],
+      "answer": 2,
+      "explanation": "The with statement manages resources safely."
+    },
+    {
+      "question": "What is the benefit of list comprehensions?",
+      "options": ["Make code slower", "Increase memory", "Concise and efficient syntax", "Convert lists to dicts"],
+      "answer": 2,
+      "explanation": "List comprehensions are fast and readable."
+    },
+    {
+      "question": "Which technique helps optimize performance?",
+      "options": ["Nested loops everywhere", "Caching results", "Using more prints", "Writing longer code"],
+      "answer": 1,
+      "explanation": "Caching avoids recalculating results."
+    },
+    {
+      "question": "Which is a common API request library?",
+      "options": ["json", "os", "requests", "url"],
+      "answer": 2,
+      "explanation": "requests is the most widely used HTTP library."
+    },
+    {
+      "question": "What is the purpose of exception chaining?",
+      "options": ["Hide errors", "Link related errors together", "Stop execution", "Speed up code"],
+      "answer": 1,
+      "explanation": "Chaining preserves context when raising new exceptions."
+    },
+    {
+      "question": "Which technique reads a file line-by-line efficiently?",
+      "options": ["read()", "readfast()", "for line in file:", "line.open()"],
+      "answer": 2,
+      "explanation": "Iterating over the file yields one line at a time."
+    },
+    {
+      "question": "Which choice represents Pythonic code?",
+      "options": ["Complex over simple", "Simple over complex", "Verbose over clear", "Manual memory management"],
+      "answer": 1,
+      "explanation": "Python prefers simplicity and readability."
+    },
+    {
+      "question": "What technique prevents code repetition?",
+      "options": ["Copy-paste", "Writing longer functions", "Refactoring into functions", "Using globals"],
+      "answer": 2,
+      "explanation": "Functions encapsulate repeated logic."
+    },
+    {
+      "question": "Which technique helps handle large datasets?",
+      "options": ["Load everything into memory", "Use generators", "Use while True loops", "Print every value"],
+      "answer": 1,
+      "explanation": "Generators yield data lazily to save memory."
+    }
+  ]
+}

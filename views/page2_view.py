@@ -1,130 +1,276 @@
-import tkinter as tk
-from tkinter import ttk
+import customtkinter as ctk
+from PIL import Image, ImageTk
 
-class Page2View(tk.Frame):
+class Page2View(ctk.CTkFrame):
     def __init__(self, master, controller):
         super().__init__(master)
         self.controller = controller
-        self.configure(bg="#E7DFD0")
+        
+        self.colors = {
+            "dark_navy": "#22223B",
+            "soft_beige": "#F4EDE2",
+            "white": "#FFFFFF",
+            "card_bg": "#FFFFFF",
+            "text_primary": "#22223B",
+            "text_secondary": "#4A4E69",
+            "accent": "#4A4E69",
+            "button_bg": "#22223B",
+            "highlight": "#ECB45E",
+            "category_colors": {
+                "Core": "#FF6B6B",
+                "Advanced": "#4ECDC4",
+                "Modules": "#45B7D1",
+                "Techniques": "#96CEB4"
+            }
+        }
+        
+        self.configure(fg_color=self.colors["soft_beige"], corner_radius=0)
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_rowconfigure(0, weight=1)
         self.create_widgets()
     
     def create_widgets(self):
-        # Header
-        header_frame = tk.Frame(self, bg="#31304C", height=80)
-        header_frame.pack(fill=tk.X, padx=0, pady=0)
+        # Main container that fills entire window
+        main_container = ctk.CTkFrame(self, fg_color=self.colors["soft_beige"])
+        main_container.pack(fill="both", expand=True, padx=0, pady=0)
+        
+        # Scrollable frame
+        scrollable_frame = ctk.CTkScrollableFrame(
+            main_container,
+            fg_color=self.colors["soft_beige"],
+            scrollbar_button_color="#CCCCCC",
+            scrollbar_button_hover_color="#999999",
+            border_width=0
+        )
+        scrollable_frame.pack(fill="both", expand=True, padx=0, pady=0)
+        
+        # Configure scrollable frame to expand
+        scrollable_frame.grid_columnconfigure(0, weight=1)
+        
+        # HEADER SECTION - Full width
+        header_frame = ctk.CTkFrame(
+            scrollable_frame,
+            fg_color=self.colors["dark_navy"],
+            height=200,
+            corner_radius=0
+        )
+        header_frame.pack(fill="x", pady=0, padx=0)
         header_frame.pack_propagate(False)
         
-        # Header content
-        header_content = tk.Frame(header_frame, bg="#31304C")
-        header_content.pack(expand=True, fill=tk.BOTH, padx=20)
+        # Header content with padding
+        header_content = ctk.CTkFrame(header_frame, fg_color=self.colors["dark_navy"])
+        header_content.pack(expand=True, fill="both", padx=40, pady=40)
         
-        # App title
-        title_label = tk.Label(
-            header_content,
+        # Text section (left)
+        text_frame = ctk.CTkFrame(header_content, fg_color=self.colors["dark_navy"])
+        text_frame.pack(side="left", fill="both", expand=True)
+        
+        title_label = ctk.CTkLabel(
+            text_frame,
             text="PyWizz",
-            font=("Arial", 20, "bold"),
-            fg="white",
-            bg="#31304C"
+            font=("Arial", 32, "bold"),
+            text_color="white"
         )
-        title_label.pack(side=tk.LEFT)
+        title_label.pack(anchor="w")
         
-        # Subtitle
-        subtitle_label = tk.Label(
-            header_content,
+        subtitle_label = ctk.CTkLabel(
+            text_frame,
             text="Challenge yourself",
-            font=("Arial", 10),
-            fg="#ECB45E",
-            bg="#31304C"
+            font=("Arial", 16),
+            text_color=self.colors["highlight"]
         )
-        subtitle_label.pack(side=tk.LEFT, padx=(10, 0))
+        subtitle_label.pack(anchor="w", pady=(8, 0))
         
-        # Body container
-        body_container = tk.Frame(self, bg="#E7DFD0")
-        body_container.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
+        # Character illustration (right) - transparent background
+        try:
+            character_img = ctk.CTkImage(
+                light_image=Image.open("boy_yellow.png"),
+                dark_image=Image.open("boy_yellow.png"),
+                size=(140, 140)
+            )
+            character_label = ctk.CTkLabel(
+                header_content,
+                image=character_img,
+                text="",
+                fg_color=self.colors["dark_navy"]  # Match header background
+            )
+            character_label.pack(side="right")
+        except:
+            character_label = ctk.CTkLabel(
+                header_content,
+                text="🧑‍💻",
+                font=("Arial", 60),
+                text_color=self.colors["highlight"],
+                fg_color=self.colors["dark_navy"]  # Match header background
+            )
+            character_label.pack(side="right")
         
-        # Body header with History button
-        body_header = tk.Frame(body_container, bg="#E7DFD0")
-        body_header.pack(fill=tk.X, pady=(0, 15))
+        # Decorative line
+        line_frame = ctk.CTkFrame(
+            scrollable_frame,
+            fg_color=self.colors["accent"],
+            height=2,
+            corner_radius=1
+        )
+        line_frame.pack(fill="x", padx=40, pady=(25, 30))
+        line_frame.pack_propagate(False)
         
-        categories_label = tk.Label(
-            body_header,
+        # BODY CONTENT
+        body_frame = ctk.CTkFrame(scrollable_frame, fg_color=self.colors["soft_beige"])
+        body_frame.pack(fill="both", expand=True, padx=40, pady=(0, 40))
+        
+        # Configure body frame columns
+        body_frame.grid_columnconfigure(0, weight=1)
+        
+        # Explore Quizzes header
+        explore_header = ctk.CTkFrame(body_frame, fg_color=self.colors["soft_beige"], height=50)
+        explore_header.pack(fill="x", pady=(0, 20))
+        explore_header.pack_propagate(False)
+        
+        explore_header.grid_columnconfigure(0, weight=1)
+        
+        explore_label = ctk.CTkLabel(
+            explore_header,
             text="Explore Quizzes",
-            font=("Arial", 16, "bold"),
-            fg="#31304C",
-            bg="#E7DFD0"
+            font=("Arial", 24, "bold"),
+            text_color=self.colors["text_primary"]
         )
-        categories_label.pack(side=tk.LEFT)
+        explore_label.grid(row=0, column=0, sticky="w")
         
-        history_button = tk.Button(
-            body_header,
+        history_button = ctk.CTkButton(
+            explore_header,
             text="History",
-            font=("Arial", 10),
-            bg="#F3F1EB",
-            fg="#31304C",
-            relief=tk.FLAT,
-            cursor="hand2"
+            font=("Arial", 14),
+            width=100,
+            height=40,
+            corner_radius=20,
+            fg_color=self.colors["white"],
+            hover_color="#F0F0F0",
+            text_color=self.colors["text_primary"],
+            border_width=2,
+            border_color=self.colors["accent"],
+            command=self.controller.show_history
         )
-        history_button.pack(side=tk.RIGHT)
-        self._apply_rounded_style(history_button)
+        history_button.grid(row=0, column=1, sticky="e")
         
-        # Categories container
-        categories_frame = tk.Frame(body_container, bg="#F3F1EB", relief=tk.FLAT)
-        categories_frame.pack(fill=tk.BOTH, expand=True, padx=0, pady=0)
+        # CATEGORIES GRID - Using grid for equal sizing
+        categories_frame = ctk.CTkFrame(body_frame, fg_color=self.colors["soft_beige"])
+        categories_frame.pack(fill="both", expand=True)
         
-        # Create category cards
-        categories = [
-            "Basics",
-            "Advanced", 
-            "Libraries",
-            "APIs"
-        ]
+        # Configure grid with equal columns
+        categories_frame.grid_columnconfigure(0, weight=1)
+        categories_frame.grid_columnconfigure(1, weight=1)
+        categories_frame.grid_rowconfigure(0, weight=1)
+        categories_frame.grid_rowconfigure(1, weight=1)
         
+        # Category descriptions
+        category_info = {
+            "Core": "Basic Python concepts",
+            "Advanced": "Complex Python features", 
+            "Modules": "Standard libraries & packages",
+            "Techniques": "Programming techniques"
+        }
+        
+        # Create category cards in grid
+        categories = ["Core", "Advanced", "Modules", "Techniques"]
         for i, category in enumerate(categories):
-            self.create_category_card(categories_frame, category, i)
+            row = i // 2
+            col = i % 2
+            
+            # Create card container with fixed minimum size
+            card_container = ctk.CTkFrame(
+                categories_frame,
+                fg_color=self.colors["white"],
+                corner_radius=20,
+                border_width=0
+            )
+            card_container.grid(row=row, column=col, padx=(0, 15) if col == 0 else (15, 0), pady=(0, 15) if row == 0 else 15, sticky="nsew")
+            
+            # Make card clickable
+            card_container.bind("<Button-1>", lambda e, cat=category: self.controller.select_category(cat))
+            card_container.configure(cursor="hand2")
+            
+            # Create the card content
+            self.create_category_card(card_container, category, category_info[category])
+        
+        # Add bottom padding
+        bottom_padding = ctk.CTkFrame(scrollable_frame, fg_color=self.colors["soft_beige"], height=40)
+        bottom_padding.pack(fill="x")
     
-    def create_category_card(self, parent, category_name, index):
-        card_frame = tk.Frame(
-            parent,
-            bg="#F3F1EB",
-            relief=tk.RAISED,
-            bd=1,
-            highlightbackground="#C1BBB3"
+    def create_category_card(self, parent, category, description):
+        color = self.colors["category_colors"][category]
+        
+        # Configure parent to expand
+        parent.grid_rowconfigure(0, weight=1)
+        parent.grid_columnconfigure(0, weight=1)
+        
+        # Main content frame
+        content_frame = ctk.CTkFrame(parent, fg_color=self.colors["white"])
+        content_frame.grid(row=0, column=0, sticky="nsew", padx=25, pady=20)
+        
+        # Left section (icon and text)
+        left_frame = ctk.CTkFrame(content_frame, fg_color=self.colors["white"])
+        left_frame.pack(side="left", fill="both", expand=True)
+        
+        # Icon with background color
+        icon_frame = ctk.CTkFrame(
+            left_frame,
+            fg_color=color,
+            width=60,
+            height=60,
+            corner_radius=15
         )
-        card_frame.pack(fill=tk.X, padx=15, pady=8, ipady=10)
+        icon_frame.pack(anchor="w")
+        icon_frame.pack_propagate(False)
         
-        # Card content
-        content_frame = tk.Frame(card_frame, bg="#F3F1EB")
-        content_frame.pack(fill=tk.X, padx=15)
+        # Category emojis
+        category_emojis = {
+            "Core": "🐍",
+            "Advanced": "🚀", 
+            "Modules": "📦",
+            "Techniques": "💡"
+        }
         
-        # Category name
-        name_label = tk.Label(
-            content_frame,
-            text=category_name,
-            font=("Arial", 12, "bold"),
-            fg="#31304C",
-            bg="#F3F1EB",
+        icon_label = ctk.CTkLabel(
+            icon_frame,
+            text=category_emojis.get(category, "📚"),
+            font=("Arial", 28),
+            text_color="white",
+            fg_color=color
+        )
+        icon_label.pack(expand=True)
+        
+        # Category name - MAKE SURE IT SHOWS
+        category_label = ctk.CTkLabel(
+            left_frame,
+            text=category,
+            font=("Arial", 18, "bold"),
+            text_color=self.colors["text_primary"],
             anchor="w"
         )
-        name_label.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        category_label.pack(anchor="w", pady=(15, 5))
         
-        # Clickable area (simulated button)
-        click_label = tk.Label(
-            content_frame,
-            text="→",
-            font=("Arial", 14, "bold"),
-            fg="#ECB45E",
-            bg="#F3F1EB",
-            cursor="hand2"
+        # Description - MAKE SURE IT SHOWS
+        desc_label = ctk.CTkLabel(
+            left_frame,
+            text=description,
+            font=("Arial", 12),
+            text_color=self.colors["text_secondary"],
+            anchor="w"
         )
-        click_label.pack(side=tk.RIGHT)
-        click_label.bind("<Button-1>", lambda e, cat=category_name: self.controller.select_category(cat))
+        desc_label.pack(anchor="w")
         
-        # Make the whole card clickable
-        for widget in [card_frame, content_frame, name_label]:
-            widget.bind("<Button-1>", lambda e, cat=category_name: self.controller.select_category(cat))
-            widget.configure(cursor="hand2")
-    
-    def _apply_rounded_style(self, widget):
-        # Simulate rounded corners
-        if isinstance(widget, tk.Button):
-            widget.config(highlightthickness=1, highlightbackground="#C1BBB3")
+        # Right section (arrow)
+        right_frame = ctk.CTkFrame(content_frame, fg_color=self.colors["white"], width=40)
+        right_frame.pack(side="right")
+        right_frame.pack_propagate(False)
+        
+        arrow_label = ctk.CTkLabel(
+            right_frame,
+            text="→",
+            font=("Arial", 28, "bold"),
+            text_color=color,
+            fg_color=self.colors["white"]
+        )
+        arrow_label.pack(expand=True)
+        arrow_label.bind("<Button-1>", lambda e, cat=category: self.controller.select_category(cat))
